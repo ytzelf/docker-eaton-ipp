@@ -9,7 +9,6 @@ RUN apt-get update && apt-get install -y wget
 RUN wget http://pqsoftware.eaton.com/install/linux/ipp/ipp-linux_${IPP_VERSION}_amd64.deb
 RUN dpkg -i ipp-linux_${IPP_VERSION}_amd64.deb
 
-
 RUN mkdir -p /etc/my_init.d
 COPY ipp.sh /etc/my_init.d/ipp.sh
 RUN chmod +x /etc/my_init.d/ipp.sh
