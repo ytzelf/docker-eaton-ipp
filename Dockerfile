@@ -14,6 +14,6 @@ COPY ipp.sh /etc/my_init.d/ipp.sh
 RUN chmod +x /etc/my_init.d/ipp.sh
 
 EXPOSE 4679
-# VOLUME ["/usr/local/Eaton/IntelligentPowerProtector"]
+VOLUME ["/usr/local/Eaton/IntelligentPowerProtector/db/mc2.db"]
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
