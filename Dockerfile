@@ -2,6 +2,7 @@ FROM phusion/baseimage:0.11
 
 MAINTAINER ytzelf
 ENV IPP_VERSION=1.61.158-1
+ENV CONFD_VERSION=0.16.0
 
 CMD ["/sbin/my_init"]
 
