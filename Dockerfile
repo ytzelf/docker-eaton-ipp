@@ -7,7 +7,7 @@ ENV CONFD_VERSION=0.16.0
 CMD ["/sbin/my_init"]
 
 # INSTALL EATON IPP
-RUN apt-get update && apt-get install -y wget ssmtp
+RUN apt-get update && apt-get install -y wget ssmtp mailutils
 RUN wget http://pqsoftware.eaton.com/install/linux/ipp/ipp-linux_${IPP_VERSION}_amd64.deb
 RUN dpkg -i ipp-linux_${IPP_VERSION}_amd64.deb
 
