@@ -1,0 +1,17 @@
+
+[template]
+src = "ssmtp.conf.tmpl"
+dest = "/etc/ssmtp/ssmtp.conf"
+gid = 8
+keys = [
+    "SSMTP_root",
+    "SSMTP_mailhub",
+    "SSMTP_rewriteDomain",
+    "SSMTP_hostname",
+    "SSMTP_UseTLS",
+    "SSMTP_UseSTARTTLS",
+    "SSMTP_AuthUser",
+    "SSMTP_AuthPass",
+    "SSMTP_AuthMethod",
+    "SSMTP_FromLineOverride"
+]
