@@ -4,11 +4,12 @@ MAINTAINER ytzelf
 ENV IPP_VERSION=1.61.158-1
 ENV CONFD_VERSION=0.16.0
 ENV DISABLE_CRON=1
+ENV DISABLE_SYSLOG=1
 
 CMD ["/sbin/my_init"]
 
 # INSTALL EATON IPP
-RUN apt-get update && apt-get install -y wget ssmtp mailutils rsyslog iptables syslog-ng-core
+RUN apt-get update && apt-get install -y wget ssmtp mailutils iptables syslog-ng-core
 RUN wget http://pqsoftware.eaton.com/install/linux/ipp/ipp-linux_${IPP_VERSION}_amd64.deb
 RUN dpkg -i ipp-linux_${IPP_VERSION}_amd64.deb
 
