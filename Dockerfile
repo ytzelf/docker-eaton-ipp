@@ -26,7 +26,7 @@ RUN chmod +x /etc/my_init.d/ipp.sh
 
 # PORTS & VOLUMES
 EXPOSE 4679
-# VOLUME ["/usr/local/Eaton/IntelligentPowerProtector/db"]
-# VOLUME ["/usr/local/Eaton/IntelligentPowerProtector/configs"]
+VOLUME ["/usr/local/Eaton/IntelligentPowerProtector/db"]
+VOLUME ["/usr/local/Eaton/IntelligentPowerProtector/configs"]
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
