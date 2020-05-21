@@ -1,1 +1,2 @@
-tcpserver 0.0.0.0 8008 sh -c "/scripts/check.sh"
+#!/bin/bash
+exec tcpserver 0.0.0.0 8008 sh -c "/scripts/check.sh"
