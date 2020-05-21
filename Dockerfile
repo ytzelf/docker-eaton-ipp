@@ -22,7 +22,8 @@ RUN chmod +x /etc/my_init.d/confd.sh
 # CREATE SERVICES
 RUN mkdir -p /etc/my_init.d
 COPY ipp.sh /etc/my_init.d/ipp.sh
-RUN chmod +x /etc/my_init.d/ipp.sh
+COPY tcpserver.sh /etc/my_init.d/tcpserver.sh
+RUN chmod +x /etc/my_init.d/*
 
 # PORTS & VOLUMES
 EXPOSE 4679
